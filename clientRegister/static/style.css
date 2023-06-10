@@ -1,0 +1,75 @@
+.heading {
+    text-align: center;
+    color: red;
+}
+
+.info {
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px;
+}
+
+.info .infolist {
+    margin-left:35%;
+}
+
+.info .infolist ul li {
+    margin-bottom: 10px;
+}
+
+.info .infolist ul li span{
+    color: blue;
+}
+
+.client {
+    text-align: center;
+    padding: 10px;
+}
+
+.client a {
+    border: solid black 1px;
+    margin-left: 10px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.client a:hover {
+    background: blue;
+    color: white;
+}
+
+.form {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.inputfields {
+    padding: 10px;
+}
+
+.inputfields input[type=text], input[type=email], input[type=password] {
+    width: 300px;
+    height: 30px;
+}
+
+.inputfields input[type=submit] {
+    width: 100px;
+    height: 30px;
+    color: red;
+}
+
+.inputfields input[type=submit]:hover {
+    color: blue;
+    cursor: pointer;
+}
+
+.logout {
+    float: right;
+}
+.logout a {
+    text-decoration: none;
+    color: red;
+    border: solid black 1px;
+    padding: 5px;
+}

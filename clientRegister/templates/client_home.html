@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Client Home</title>
+    <link rel="stylesheet" href="{{url_for('client_bp.static', filename='style.css')}}">
+</head>
+<body>
+{% if current_user.is_authenticated %}
+<div class="heading">
+  <h2>Welcome {{current_user.username}}</h2>
+</div>
+<hr>
+<div class="logout">
+    <a href="{{url_for('client_bp.client_logout')}}" type="button">Logout</a>
+</div>
+{% endif %}
+</body>
+</html>

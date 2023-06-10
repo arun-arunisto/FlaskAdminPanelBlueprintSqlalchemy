@@ -1,0 +1,73 @@
+.heading {
+    text-align: center;
+    color: red;
+    padding: 10px;
+}
+
+.form {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.inputfields {
+    padding: 10px;
+}
+
+.inputfields input[type=text], input[type=email], input[type=password] {
+    width: 300px;
+    height: 30px;
+}
+
+.inputfields input[type=submit] {
+    width: 100px;
+    height: 30px;
+    color: red;
+}
+
+.inputfields input[type=submit]:hover {
+    color: blue;
+    cursor: pointer;
+}
+
+.foot {
+    text-align: center;
+}
+
+.foot a:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.logout {
+    float: right;
+}
+.logout a {
+    text-decoration: none;
+    color: red;
+    border: solid black 1px;
+    padding: 5px;
+}
+
+.logout a:hover {
+    color: black;
+    background: red;
+}
+
+.clienttable {
+    padding: 10px;
+}
+
+.clienttable table {
+    margin: 10px auto;
+    border: solid black 1px;
+    width: 75%;
+}
+.clienttable table th {
+    border: solid red 2px;
+}
+
+.clienttable table td {
+    border: solid blue 1px;
+    text-align: center;
+}

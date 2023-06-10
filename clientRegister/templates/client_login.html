@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Client Login</title>
+    <link rel="stylesheet" href="{{url_for('client_bp.static', filename='style.css')}}">
+</head>
+<body>
+<div class="heading">
+  <h2>Client Login</h2>
+</div>
+{% for msg in get_flashed_messages(category_filter="success") %}
+    <p>{{msg}}</p>
+{% endfor %}
+<hr>
+{{form.hiddentag}}
+<div class="form">
+    <form method="post">
+        <div class="inputfields">
+            {{form.email(placeholder="Email")}}
+        </div>
+        <div class="inputfields">
+            {{form.password(placeholder="Password")}}
+        </div>
+        <div class="inputfields">
+            {{form.csrf_token}}
+            {{form.submit()}}
+        </div>
+        {% for error in get_flashed_messages(category_filter=["error"]) %}
+            <p>{{error}}</p>
+        {% endfor %}
+    </form>
+</div>
+</body>
+</html>

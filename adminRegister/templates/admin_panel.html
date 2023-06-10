@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="{{url_for('admin_bp.static', filename='style.css')}}">
+</head>
+<body>
+{% if current_user.is_authenticated %}
+<div class="heading">
+    <h2>Admin Panel</h2>
+</div>
+<hr>
+<div class="logout">
+    <a href="{{url_for('admin_bp.admin_logout')}}" type="button">Logout</a>
+</div>
+
+
+
+<div class="clienttable">
+    <table>
+        <tr>
+            <th>Client Name</th>
+            <th>Client Mail</th>
+            <th>Client Password</th>
+        </tr>
+        {% for cl in client %}
+        <tr>
+            <td>{{cl.username}}</td>
+            <td>{{cl.email}}</td>
+            <td>********</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endif %}
+
+</body>
+</html>

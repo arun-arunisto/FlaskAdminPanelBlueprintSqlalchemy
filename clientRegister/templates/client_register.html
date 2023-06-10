@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Client Register</title>
+    <link rel="stylesheet" href="{{url_for('client_bp.static', filename='style.css')}}">
+</head>
+<body>
+<div class="heading">
+    <h2>Client Register</h2>
+</div>
+<hr>
+{{form.hiddentag}}
+<div class="form">
+    <form method="post">
+        <div class="inputfields">
+            {{form.username(placeholder='Username')}}
+            {% for error in form.username.error %}
+                <p>{{error}}</p>
+            {% endfor %}
+        </div>
+        <div class="inputfields">
+            {{form.email(placeholder='Email')}}
+            {% for error in form.email.error %}
+                <p>{{error}}</p>
+            {% endfor %}
+        </div>
+        <div class="inputfields">
+            {{form.password(placeholder='Password')}}
+            {% for error in form.password.error %}
+                <p>{{error}}</p>
+            {% endfor %}
+        </div>
+        <div class="inputfields">
+            {{form.confirm(placeholder='Confirm Password')}}
+            {% for error in form.confirm.error %}
+                <p>{{error}}</p>
+            {% endfor %}
+        </div>
+        <div class="inputfields">
+            {{form.csrf_token}}
+            {{form.submit}}
+        </div>
+    </form>
+</div>
+</body>
+</html>

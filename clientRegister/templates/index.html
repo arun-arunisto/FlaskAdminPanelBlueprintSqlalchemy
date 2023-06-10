@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{{url_for('client_bp.static', filename='style.css')}}">
+</head>
+<body>
+<div class="heading">
+  <h2>Home Page</h2>
+</div>
+<hr>
+<div class="info">
+    <div class="infolist">
+        <h2>App Instructions</h2>
+        <ul>
+            <li>For admin navigate to <span>/admin_index</span></li>
+            <li>Then register admin and then login</li>
+            <li>After login you will navigate to <span>/admin_panel</span></li>
+            <li>On admin panel you are able to view the client users</li>
+        </ul>
+    </div>
+</div>
+<div class="client">
+    <a href="{{url_for('client_bp.client_register')}}" type="button">Client Register</a>
+    <a href="{{url_for('client_bp.client_login')}}" type="button">Client Login</a>
+</div>
+</body>
+</html>
